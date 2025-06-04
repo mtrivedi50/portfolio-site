@@ -1,7 +1,14 @@
+// @ts-expect-error No corresponding @types for fontsource. Ignore instead of creating
+// globals.d.ts, which is generally bad practice.
+import "@fontsource/inter";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "@/assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
+import "@/App.css";
 
 function App() {
   const [count, setCount] = useState(0);
