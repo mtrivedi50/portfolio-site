@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start": "serve -s dist"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
@@ -28,7 +29,8 @@
     "path": "^0.12.7",
     "prettier": "^3.5.3",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "serve": "^14.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

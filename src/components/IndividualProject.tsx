@@ -5,12 +5,12 @@ import StarBorderRoundedIcon from "@mui/icons-material/StarBorderRounded";
 import IconButton from "@mui/material/IconButton";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import ImageGallery from "@/components/ImageGallery";
-import type React from "react";
 
 export interface IndividualProjectProps {
-  name: string | React.ReactNode;
+  name: string;
   description: string;
   technologies: string[];
+  inProgress: boolean;
   images?: string[];
   browserUrl?: string;
   githubUrl?: string;
@@ -23,13 +23,14 @@ export function IndividualProject(props: IndividualProjectProps) {
       <Stack spacing={4} sx={{ textAlign: "left" }}>
         <Stack direction="row" sx={{ justifyContent: "space-between" }}>
           <Stack direction="row" spacing={4} sx={{ alignItems: "center" }}>
-            {typeof props.name === "string" ? (
+            <Stack>
               <Typography variant="h5" fontWeight={700}>
                 {props.name}
               </Typography>
-            ) : (
-              props.name
-            )}
+              {props.inProgress && (
+                <Typography color="secondary">(in progress)</Typography>
+              )}
+            </Stack>
             {props.stars && (
               <Chip
                 sx={{

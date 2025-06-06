@@ -13,14 +13,11 @@ import beehiveFigure from "@/assets/beehive_figure.png";
 
 const _fullStackProjectDetails: IndividualProjectProps[] = [
   {
-    name: (
-      <Typography variant="h5" fontWeight={700}>
-        KnowledgeHub<Typography color="secondary">(in progress)</Typography>
-      </Typography>
-    ),
+    name: "KnowledgeHub",
     description:
       "GraphRAG agent for searching against all internal repositories of company knowledge (Slack, Github, Notion, etc.). Performs entity resolution to ensure that different sources are linked together for more accurate, thorough answers.",
     browserUrl: "TODO",
+    inProgress: true,
     technologies: [
       "FastAPI",
       "SQLAlchemy",
@@ -34,14 +31,11 @@ const _fullStackProjectDetails: IndividualProjectProps[] = [
     ],
   },
   {
-    name: (
-      <Typography variant="h5" fontWeight={700}>
-        DataDocs<Typography color="secondary">(in progress)</Typography>
-      </Typography>
-    ),
+    name: "DataDocs",
     description:
       "Automatically generate beautiful data dictionaries using Pydantic. Supports versioning and markdown documentation for LLMs.",
     browserUrl: "TODO",
+    inProgress: true,
     technologies: [
       "Django Rest Framework",
       "Typescript + React",
@@ -59,6 +53,7 @@ const openSourceProjectDetails: IndividualProjectProps[] = [
       "Open-source data orchestration in Python. Features runtime dependency declaration via function calls, a flexible CLI, integrations to external databases and data processing frameworks (e.g., Postgres, Snowflake, Trino, PySpark), and an interactive graph visualization.",
     githubUrl: "https://github.com/runprism/prism",
     stars: 86,
+    inProgress: false,
     docsUrl: "https://docs.runprism.com",
     technologies: ["Python3", "SQLAlchemy", "Javascript"],
     images: [prismInit, prismRun, prismDocs],
@@ -69,6 +64,7 @@ const openSourceProjectDetails: IndividualProjectProps[] = [
       "Cloud deployment in Python. Users can run Python functions, programs, modules, or Jupyter notebooks on virtual machines. Integrates with containerization tools like Docker.",
     githubUrl: "https://github.com/runprism/alto",
     stars: 39,
+    inProgress: false,
     docsUrl: "https://alto.mintlify.app/welcome/v0.0.8/welcome",
     technologies: ["Python3", "Docker", "EC2"],
     images: [altoConfig, altoBuild],
@@ -79,6 +75,7 @@ const openSourceProjectDetails: IndividualProjectProps[] = [
       "LLM agent orchestration framework. Supports sequential chats, hierarchical chats, multi-agent collaboration / debates, loops and conditionals between agents, and feedback!",
     githubUrl: "https://github.com/beehive-hq/beehiveai",
     stars: 64,
+    inProgress: false,
     docsUrl: "https://beehivehq.github.io/beehive-ai/",
     technologies: ["Python3", "Pydantic", "OpenAI", "ReAct"],
     images: [beehiveCode, beehiveFigure],
