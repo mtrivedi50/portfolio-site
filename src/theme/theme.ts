@@ -8,7 +8,7 @@ const theme = createTheme({
       main: "#000000",
     },
     secondary: {
-      main: "#f59e0b",
+      main: "#6e7784",
     },
     error: {
       main: "#ef4444",
@@ -47,41 +47,30 @@ const theme = createTheme({
     body2: { fontSize: "0.875rem" },
   },
   shape: {
-    borderRadius: 8, // Tailwind's rounded-md
+    borderRadius: 8,
   },
-  spacing: 4, // Tailwind's default spacing scale (4px per unit)
+  spacing: 4,
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: "none", // remove all-caps
-          borderRadius: "0.5rem", // Tailwind's rounded-md (8px)
-        },
-      },
-    },
-    MuiPaper: {
-      styleOverrides: {
-        root: {
+          textTransform: "none",
           borderRadius: "0.5rem",
         },
       },
     },
-    MuiAppBar: {
+    MuiChip: {
       styleOverrides: {
         root: {
-          height: appBarHeight,
-          borderBottom: "1px solid lightgray",
-          borderRadius: "0rem",
-          backgroundColor: "#ffffff",
-          paddingLeft: "2rem",
-          paddingRight: "2rem",
+          fontSize: "0.75rem",
         },
       },
     },
-    MuiTableHead: {
+    MuiCard: {
       styleOverrides: {
         root: {
-          backgroundColor: "#fafafa",
+          border: "1px solid #ececec",
+          padding: "1rem",
         },
       },
     },

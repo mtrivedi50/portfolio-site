@@ -1,40 +1,28 @@
 // @ts-expect-error No corresponding @types for fontsource. Ignore instead of creating
 // globals.d.ts, which is generally bad practice.
 import "@fontsource/inter";
+import "@fontsource/inter/300.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
 
-import { useState } from "react";
-import reactLogo from "@/assets/react.svg";
-import viteLogo from "/vite.svg";
+import { ThemeProvider } from "@emotion/react";
+import { Stack } from "@mui/material";
 import "@/App.css";
+import { Hero } from "@/components/Hero";
+import theme from "@/theme/theme";
+import { Projects } from "@/components/Projects";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ThemeProvider theme={theme}>
+        <Stack sx={{ alignItems: "center" }}>
+          <Stack spacing={12} sx={{ width: "75%" }}>
+            <Hero />
+            <Projects />
+          </Stack>
+        </Stack>
+      </ThemeProvider>
     </>
   );
 }
