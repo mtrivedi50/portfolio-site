@@ -90,7 +90,7 @@ export function Projects() {
       <Typography variant="h2">Featured Projects</Typography>
       <Stack spacing={2}>
         {openSourceProjectDetails.map((project) => (
-          <IndividualProject {...project} />
+          <IndividualProject key={project.name} {...project} />
         ))}
       </Stack>
     </Stack>

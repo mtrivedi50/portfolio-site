@@ -86,7 +86,7 @@ export function IndividualProject(props: IndividualProjectProps) {
         <Typography variant="body2">{props.description}</Typography>
         <Stack direction="row" spacing={2}>
           {props.technologies.map((technology) => (
-            <Chip label={technology} />
+            <Chip key={technology} label={technology} />
           ))}
         </Stack>
         {props.images && <ImageGallery imageList={props.images} />}
