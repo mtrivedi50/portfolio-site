@@ -73,7 +73,7 @@ const openSourceProjectDetails: IndividualProjectProps[] = [
     name: "Beehive",
     description:
       "LLM agent orchestration framework. Supports sequential chats, hierarchical chats, multi-agent collaboration / debates, loops and conditionals between agents, and feedback!",
-    githubUrl: "https://github.com/beehive-hq/beehiveai",
+    githubUrl: "https://github.com/beehivehq/beehive-ai",
     stars: 64,
     inProgress: false,
     docsUrl: "https://beehivehq.github.io/beehive-ai/",
