@@ -52,6 +52,7 @@ export default function ImageGallery({ imageList }: { imageList: string[] }) {
                 objectFit: "cover",
                 borderRadius: 6,
                 cursor: "pointer",
+                border: "0.25px solid black",
               }}
               onClick={() => handleOpen(index)}
             />

@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import {
   IndividualProject,
   type IndividualProjectProps,
@@ -10,39 +10,31 @@ import altoConfig from "@/assets/alto_config.png";
 import altoBuild from "@/assets/alto_build.png";
 import beehiveCode from "@/assets/beehive_code.png";
 import beehiveFigure from "@/assets/beehive_figure.png";
+import integrationsFigure from "@/assets/integrations.png";
+import chatFigure from "@/assets/chat.png";
+import fullDemo from "@/assets/demo.gif";
 
-const _fullStackProjectDetails: IndividualProjectProps[] = [
+const fullStackProjectDetails: IndividualProjectProps[] = [
   {
-    name: "KnowledgeHub",
+    name: "cmd+A",
     description:
       "GraphRAG agent for searching against all internal repositories of company knowledge (Slack, Github, Notion, etc.). Performs entity resolution to ensure that different sources are linked together for more accurate, thorough answers.",
-    browserUrl: "TODO",
-    inProgress: true,
+    githubUrl: "https://github.com/mtrivedi50/cmd-a",
+    browserUrl: "https://cmda.mihir-trivedi.com",
+    inProgress: false,
     technologies: [
-      "FastAPI",
-      "SQLAlchemy",
-      "Typescript + React",
-      "Postgres",
-      "Pinecone",
-      "MongoDB",
-      "Neo4J",
-      "Docker",
       "Kubernetes",
-    ],
-  },
-  {
-    name: "DataDocs",
-    description:
-      "Automatically generate beautiful data dictionaries using Pydantic. Supports versioning and markdown documentation for LLMs.",
-    browserUrl: "TODO",
-    inProgress: true,
-    technologies: [
-      "Django Rest Framework",
-      "Typescript + React",
+      "Docker",
+      "FastAPI",
+      "SQLModel",
       "Pydantic",
-      "Postgres",
-      "Heroku",
+      "MongoDb",
+      "Redis",
+      "Pinecone",
+      "Neo4J",
+      "Typescript + React",
     ],
+    images: [integrationsFigure, chatFigure, fullDemo],
   },
 ];
 
@@ -83,12 +75,23 @@ const openSourceProjectDetails: IndividualProjectProps[] = [
 ];
 export function Projects() {
   return (
-    <Stack spacing={8} sx={{ textAlign: "left" }}>
-      <Typography variant="h2">Featured Projects</Typography>
-      <Stack spacing={2}>
-        {openSourceProjectDetails.map((project) => (
-          <IndividualProject key={project.name} {...project} />
-        ))}
+    <Stack spacing={8}>
+      <Stack spacing={4} sx={{ textAlign: "left" }}>
+        <Typography variant="h2">Full-Stack Projects</Typography>
+        <Stack spacing={2}>
+          {fullStackProjectDetails.map((project) => (
+            <IndividualProject key={project.name} {...project} />
+          ))}
+        </Stack>
+      </Stack>
+      <Divider />
+      <Stack spacing={4} sx={{ textAlign: "left" }}>
+        <Typography variant="h2">Featured Projects</Typography>
+        <Stack spacing={2}>
+          {openSourceProjectDetails.map((project) => (
+            <IndividualProject key={project.name} {...project} />
+          ))}
+        </Stack>
       </Stack>
     </Stack>
   );
