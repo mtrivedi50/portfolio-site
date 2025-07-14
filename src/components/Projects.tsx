@@ -12,7 +12,7 @@ import beehiveCode from "@/assets/beehive_code.png";
 import beehiveFigure from "@/assets/beehive_figure.png";
 import integrationsFigure from "@/assets/integrations.png";
 import chatFigure from "@/assets/chat.png";
-// import fullDemo from "@/assets/demo.gif";
+import fullDemo from "@/assets/demo.gif";
 
 const fullStackProjectDetails: IndividualProjectProps[] = [
   {
@@ -34,7 +34,7 @@ const fullStackProjectDetails: IndividualProjectProps[] = [
       "Neo4J",
       "Typescript + React",
     ],
-    images: [integrationsFigure, chatFigure],
+    images: [integrationsFigure, chatFigure, fullDemo],
   },
 ];
 
