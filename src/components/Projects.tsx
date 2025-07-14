@@ -86,7 +86,7 @@ export function Projects() {
       </Stack>
       <Divider />
       <Stack spacing={4} sx={{ textAlign: "left" }}>
-        <Typography variant="h2">Featured Projects</Typography>
+        <Typography variant="h2">Open-Source Projects</Typography>
         <Stack spacing={2}>
           {openSourceProjectDetails.map((project) => (
             <IndividualProject key={project.name} {...project} />
