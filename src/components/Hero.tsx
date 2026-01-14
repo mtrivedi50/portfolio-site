@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 export function Hero() {
   return (
@@ -10,12 +10,13 @@ export function Hero() {
         Mihir Trivedi
       </Typography>
       <Typography variant="body1">
-        Experienced data scientist & software engineer, currently at{" "}
-        <Link href="https://turquoise.health">Turquoise Health</Link>. I
-        specialize in solving complex problems across the stack.
+        Experienced ML software engineer. I'm currently at Meta, where I model
+        for emerging surfaces. I specialize in solving complex problems across
+        the stack.
       </Typography>
       <Typography variant="body1">
-        Outside of work, I am passionate about developer tools and open-source.
+        Outside of work, I enjoy running/lifting, tinkering with open-source dev
+        tools, and playing pickleball!
       </Typography>
     </Stack>
   );
