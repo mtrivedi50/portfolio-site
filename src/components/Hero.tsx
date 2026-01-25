@@ -10,9 +10,9 @@ export function Hero() {
         Mihir Trivedi
       </Typography>
       <Typography variant="body1">
-        Experienced ML software engineer. I'm currently at Meta, where I model
-        for emerging surfaces. I specialize in solving complex problems across
-        the stack.
+        Experienced software engineer. I'm currently at Meta, where I develop ML
+        algorithms to model ad supply for emerging surfaces. I specialize in
+        solving complex problems across the stack.
       </Typography>
       <Typography variant="body1">
         Outside of work, I enjoy running/lifting, tinkering with open-source dev
